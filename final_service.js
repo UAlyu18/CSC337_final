@@ -72,10 +72,12 @@ app.get('/', jsonParser, function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     var mode = req.query.mode;
     var content = req.query.content;
+    console.log(content);
     if (mode == "Read") {
         var objs = ReadNodes();
         res.send(objs);
     } else {
+        console.log(content);
         var result = WriteNodes(content);
         if (result) {
             res.send("False");

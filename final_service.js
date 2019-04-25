@@ -71,6 +71,7 @@ console.log('web service started');
 app.get('/', jsonParser, function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     var mode = req.query.mode;
+    console.log(content);
     var content = req.query.content;
     console.log(content);
     if (mode == "Read") {

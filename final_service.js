@@ -45,6 +45,7 @@ function ReadNodes() {
 
 
 function WriteNodes(array) {
+    console.log(array);
     var datas = JSON.parse(array);
     var strs = "";
     for (var i = 0; i < datas.length; i++) {

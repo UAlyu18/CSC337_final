@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 });
 function ReadNodes() {
     var objs = [];
-    districts = fs.readFileSync("node.txt", 'utf8');
+    districts = fs.readFileSync("public/node.txt", 'utf8');
     var lines = districts.split("\n");
     console.log(lines);
     for (var i = 0; i < lines.length; i++) {
@@ -56,7 +56,7 @@ function WriteNodes(array) {
         }
         strs += str;
     }
-    fs.writeFile("node.txt", strs, 'utf-8', function (err) {
+    fs.writeFile("public/node.txt", strs, 'utf-8', function (err) {
         if (err) {
             return false;
         }

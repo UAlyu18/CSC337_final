@@ -109,7 +109,7 @@ Files: final.html, final.css, final.js,final_service.js
 
     function showAllNotes() {
         //var url = "http://localhost:3000/?mode=Read";
-        var url="http://LuYuMemo.herokuapp.com";
+        var url="https://LuYuMemo.herokuapp.com";
         fetch(url)
             .then(checkStatus)
             .then(function(responseText){
@@ -146,7 +146,7 @@ Files: final.html, final.css, final.js,final_service.js
 
         /*$.ajax({
             url: "http://localhost:3000/?mode=Read",
-            //url: "http://LuYuMemo.herokuapp.com",
+            //url: "https://LuYuMemo.herokuapp.com",
             success: function (data) {
                 for (var j = 0; j < data.length; j++) {
                     data[j].id = data[j].id.replace('"', '');

@@ -109,8 +109,8 @@ Files: final.html, final.css, final.js,final_service.js
 
     function showAllNotes() {
         //var url = "http://localhost:3000/?mode=Read";
-        var url="https://memoluyu.herokuapp.com";
-        fetch(url)
+        let url= "https://memoluyu.herokuapp.com";
+        fetch(url, {method : 'GET'})
             .then(checkStatus)
             .then(function(responseText){
                 let data = JSON.parse(responseText);

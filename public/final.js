@@ -238,8 +238,8 @@ Files: final.html, final.css, final.js,final_service.js
                 'Accept': 'application/json',
                 'Content-Type' : 'application/json'
             },
-            //body : JSON.stringify({ mode: "Write", content: content })
-            body : JSON.stringify({"text" : "hello"})
+            body : JSON.stringify({ mode: "Write", content: content })
+            //body : JSON.stringify({"text" : "hello"})
             
         };
         fetch(url, fetchOptions)

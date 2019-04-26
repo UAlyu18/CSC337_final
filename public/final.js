@@ -108,9 +108,8 @@ Files: final.html, final.css, final.js,final_service.js
     };
 
     function showAllNotes() {
-        //var url = "http://localhost:3000/?mode=Read";
         let url= "https://memoluyu.herokuapp.com";
-        fetch(url, {method : 'GET'})
+        fetch(url)
             .then(checkStatus)
             .then(function(responseText){
                 let data = JSON.parse(responseText);
@@ -143,35 +142,6 @@ Files: final.html, final.css, final.js,final_service.js
             .catch(function(error){
                 console.log(error);
             });
-
-        /*$.ajax({
-            url: "http://localhost:3000/?mode=Read",
-            //url: "https://LuYuMemo.herokuapp.com",
-            success: function (data) {
-                for (var j = 0; j < data.length; j++) {
-                    data[j].id = data[j].id.replace('"', '');
-                    data[j].id = data[j].id.replace('"', '');
-                    data[j].title = data[j].title.replace('"', '');
-                    data[j].title = data[j].title.replace('"', '');
-                    data[j].desc = data[j].desc.replace('"', '');
-                    data[j].desc = data[j].desc.replace('"', '');
-                    data[j].date = data[j].date.replace('"', '');
-                    data[j].date = data[j].date.replace('"', '');
-                    data[j].date = data[j].date.replace('}', '');
-                    data[j].date = data[j].date.replace('\r', '');
-                }
-
-                dataArray = data;
-                for (var i = 0; i < data.length; i++) {
-                    if (lastId <= data[i].id) {
-                        lastId = parseInt(data[i].id) + 1;
-                    }
-                    key = data[i].id;
-                    note = data[i];
-                    var liElement = addNoteToDOM(note, key);
-                }
-            }
-        })*/
     }
 
     function save() {
@@ -260,16 +230,7 @@ Files: final.html, final.css, final.js,final_service.js
     function addNodesToTxt() {
         var content = JSON.stringify(dataArray);
         console.log(content);
-        /*$.ajax({
-            url: "http://localhost:3000/",
-            //url: "http://LuYuMemo.herokuapp.com",
-            data: { mode: "Write", content: content },
-            success: function (data) {
-                location.reload();
-            }
-        });*/
 
-        //var url = "http://localhost:3000/";
         var url="https://memoluyu.herokuapp.com";
         const fetchOptions = {
             method : 'POST',

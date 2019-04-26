@@ -93,7 +93,9 @@ app.get('/', jsonParser, function (req, res) {
 app.use(express.static('public'));
 
 app.post('/', jsonParser, function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
+    print req.body.text;
+    res.send(JSON.stringify(req.body.text));
+    /*res.header("Access-Control-Allow-Origin", "*");
     var mode = req.body.mode;
     var content = req.body.content;
     if (mode == "Read") {
@@ -106,7 +108,7 @@ app.post('/', jsonParser, function (req, res) {
         } else {
             res.send("Success");
         }
-    }
+    }*/
 })
 
 //app.listen(3000);

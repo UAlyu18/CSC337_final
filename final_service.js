@@ -93,7 +93,7 @@ app.get('/', jsonParser, function (req, res) {
 app.use(express.static('public'));
 
 app.post('/', jsonParser, function (req, res) {
-    print req.body.text;
+    console.log(req.body.text);
     res.send(JSON.stringify(req.body.text));
     /*res.header("Access-Control-Allow-Origin", "*");
     var mode = req.body.mode;

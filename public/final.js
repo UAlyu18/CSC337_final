@@ -231,7 +231,7 @@ Files: final.html, final.css, final.js,final_service.js
         var content = JSON.stringify(dataArray);
         console.log(content);
 
-        var url="https://memoluyu.herokuapp.com/?mode=Read"";
+        var url="https://memoluyu.herokuapp.com";
         const fetchOptions = {
             method : 'POST',
             headers : {

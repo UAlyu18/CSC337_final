@@ -108,7 +108,7 @@ Files: final.html, final.css, final.js,final_service.js
     };
 
     function showAllNotes() {
-        let url= "https://memoluyu.herokuapp.com";
+        let url= "https://memoluyu.herokuapp.com/?mode=Read";
         fetch(url)
             .then(checkStatus)
             .then(function(responseText){
@@ -231,7 +231,7 @@ Files: final.html, final.css, final.js,final_service.js
         var content = JSON.stringify(dataArray);
         console.log(content);
 
-        var url="https://memoluyu.herokuapp.com";
+        var url="https://memoluyu.herokuapp.com/?mode=Read"";
         const fetchOptions = {
             method : 'POST',
             headers : {
